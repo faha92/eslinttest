@@ -1,4 +1,4 @@
-#insecure protocol 
+// #insecure protocol 
 
 
 // Copyright (c) Microsoft Corporation.
@@ -85,7 +85,7 @@ module.exports = {
                             fix: function(fixer) {
 
                                 let protocol = node.value.replace("http","https");
-                                protocol.replace('ftp','ftps');
+                               protocol = protocol.replace('ftp','ftps');
                                 
                                 return fixer.replaceText(node, "'"+protocol+"'");
                             }
@@ -114,7 +114,6 @@ module.exports = {
         };
     },
 };
-
 
 
 # no-danger
