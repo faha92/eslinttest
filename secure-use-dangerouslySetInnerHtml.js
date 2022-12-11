@@ -33,7 +33,7 @@ module.exports = {
               // Use the fixer to replace the original value with the sanitized HTML
               return[
               fixer.replaceText(node.value, sanitizedHTML),
-              // When the automatic fix has run. Disable the warning for this rule.
+              // When the automatic fix has run. Disable the error/warning for this rule.
               fixer.insertTextAfter(node.parent.name, " // eslint-disable-next-line react/no-danger")
                 
               ];
