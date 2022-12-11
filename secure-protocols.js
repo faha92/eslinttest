@@ -25,7 +25,10 @@ module.exports = {
                 node: node,
                 messageId: 'ftp',
                 fix: function (fixer) {
-                  return fixer.replaceText(node, node.value.replace('ftp:', 'ftps:'));
+
+
+
+                  return fixer.replaceText(node,'"'+ node.value.replace('ftp:', 'ftps:')+'"');
                 },
               });
             }
